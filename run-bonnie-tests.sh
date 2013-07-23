@@ -17,5 +17,5 @@ bonnie++ -u nobody -p -1
 bonnie++ -u nobody -p 3
 for subdir in d1 d2 d3
 do
-    time bonnie++ -u nobody -ys -d $TARG/$subdir -n 4 -s 4096 > out$subdir.txt &
+    time bonnie++ -u nobody -ys -d $TARG/$subdir -n 4 -s 4096 > out_`date +%Ft%H%M`_`hostname`_$subdir.txt &
 done
